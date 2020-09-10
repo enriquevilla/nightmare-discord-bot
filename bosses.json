@@ -1,0 +1,97 @@
+[
+    {
+        "name": "The Nightmare",
+        "emoji": "nightmare",
+        "cmds": [
+            "nm",
+            "nightmare",
+            "nmdoubledrop {partySize(opt)}"
+        ],
+        "structure": "!k nm {kills} {partySize(opt)}",
+        "drops": [
+            {   
+                "name": "armor",
+                "rate": 120,
+                "items": [
+                    {
+                        "name": "Nightmare staff",
+                        "weight": 3,
+                        "id": 24422
+                    },
+                    {
+                        "name": "Inquisitor's great helm",
+                        "weight": 2,
+                        "id": 24419
+                    },
+                    {
+                        "name": "Inquisitor's hauberk",
+                        "weight": 2,
+                        "id": 24420
+                    },
+                    {
+                        "name": "Inquisitor's plateskirt",
+                        "weight": 2,
+                        "id": 24421
+                    },
+                    {
+                        "name": "Inquisitor's mace",
+                        "weight": 1,
+                        "id": 24417
+                    }
+                ]
+            },
+            {
+                "name": "orb",
+                "rate": 600,
+                "items": [
+                    {
+                        "name": "Eldritch orb",
+                        "weight": 1,
+                        "id": 24517
+                    },
+                    {
+                        "name": "Volatile orb",
+                        "weight": 1,
+                        "id": 24514
+                    },
+                    {
+                        "name": "Harmonised orb",
+                        "weight": 1,
+                        "id": 24511
+                    }
+                ]
+            },
+            {
+                "name": "tertiary",
+                "items": [
+                    {
+                        "name": "Little nightmare",
+                        "rate": 4000
+                    },
+                    {
+                        "name": "Jar of dreams",
+                        "rate": 2000
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "The Gauntlet",
+        "emoji": "gauntlet",
+        "cmds": [
+            "tg",
+            "gauntlet"
+        ],
+        "structure": "!k tg {kills}"
+    },
+    {
+        "name":"The Corrupted Gauntlet",
+        "emoji":"cgauntlet",
+        "cmds": [
+            "tcg",
+            "corrupted"
+        ],
+        "structure": "!k tcg {kills}"
+    }
+]
