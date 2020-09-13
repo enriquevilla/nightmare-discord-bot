@@ -130,8 +130,8 @@ const nightmareKill = (args) => {
     }
     args = args.splice(1);
     // if party size is set
-    const partySize = args[0].substr(0,2) !== "--" ? args[0] : 1; 
-    args = args[0].substr(0,2) !== "--" ? args.splice(1) : args;
+    const partySize = args[0] ? args[0].substr(0,2) !== "--" ? args[0] : 1 : 1; 
+    args = args[0] ? args[0].substr(0,2) !== "--" ? args.splice(1) : args : args;
     const filter = args[0] ? args[0] : "";
     args = args.splice(1);
     let drops = [];
