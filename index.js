@@ -10,7 +10,7 @@ function calcRoll(max) {
 }
 
 // Get server emojis
-const getEmojis = async (id) => {
+const getEmojis = (id) => {
     let response = await client.guilds.fetch(id)
         .then(guild => {
             return guild.emojis.cache
@@ -20,7 +20,7 @@ const getEmojis = async (id) => {
 }
 
 // Display bosses
-const getBosses = async (channel) => {
+const getBosses = (channel) => {
     let bossList = "";
     // build boss list
     let boss = bosses.find(boss => boss.name === "The Nightmare");
@@ -130,8 +130,8 @@ const nightmareKill = (args) => {
     }
     args = args.splice(1);
     // if party size is set
-    const partySize = args[0] ? args[0] : 1; 
-    args = args.splice(1);
+    const partySize = args[0].substr(0,2) !== "--" ? args[0] : 1; 
+    args = args[0].substr(0,2) !== "--" ? args.splice(1) : args;
     const filter = args[0] ? args[0] : "";
     args = args.splice(1);
     let drops = [];
@@ -172,6 +172,10 @@ const doubleDrop = (args, channel) => {
         if (calcRoll(100) <= partySize - 5) {
             if (armRoll === 1 && orbRoll === 1) {
                 break;
+            } else if (armRoll === 1 && orbRoll !== 1) {
+                orbRoll = calcRoll(600);
+            } else if (armRoll !== 1 && orbRoll === 1) {
+                armRoll = calcRoll(120);
             } else {
                 armRoll = calcRoll(120);
                 orbRoll = calcRoll(600);
