@@ -95,7 +95,7 @@ const nightmareRolls = (nm, drops, kills, filter) => {
                 totalWeight += item.weight;
             });
             // Determines unique drop from roulette
-            const unique = itemRoulette[calcRoll(totalWeight - 1)];
+            const unique = itemRoulette[calcRoll(totalWeight) - 1];
             if (filter === "--kc") {
                 drops.push(unique);
             } else if (!drops[unique[0]]) {
