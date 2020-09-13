@@ -10,7 +10,7 @@ function calcRoll(max) {
 }
 
 // Get server emojis
-const getEmojis = (id) => {
+const getEmojis = async (id) => {
     let response = await client.guilds.fetch(id)
         .then(guild => {
             return guild.emojis.cache
