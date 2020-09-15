@@ -7,7 +7,7 @@ import { nightmareKill, doubleDrop } from '../boss/Nightmare';
 let emojis;
 
 client.on('ready', () => {
-    Emojis(GUILD_ID).then(response => {emojis = response});
+    Emojis(client, GUILD_ID).then(response => {emojis = response});
     console.log(`Logged in as ${client.user.tag}`);
 });
 
