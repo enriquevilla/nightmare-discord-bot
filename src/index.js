@@ -23,8 +23,12 @@ client.on('message', msg => {
             return i.toLowerCase();
         });
         if (cmd) {
+            // !author
+            if (cmd === 'author') {
+                msg.channel.send(`Enrique Villa https://www.github.com/enriquevilla`);
+            }
 
-            // !bosses
+            // !help
             // if (cmd === 'help') {
             //     msg.channel.send(Bosses)
             // }
