@@ -31,11 +31,11 @@ client.on('message', msg => {
 
             // !k !kill
             // if (cmd === 'k' || cmd === 'kill') {
-                if (args[0] === 'nm' || args[0] === 'nightmare') {
+                if (cmd === 'nm' || cmd === 'nightmare') {
                     args = args.splice(1);
                     msg.channel.send(Drops(nightmareKill(args)));
                 }
-                if (args[0] === 'nmdoubledrop' || args[0] === 'nmdd') {
+                if (cmd === 'nmdoubledrop' || cmd === 'nmdd') {
                     args = args.splice(1);
                     msg.channel.send(doubleDrop(args));
                 }
