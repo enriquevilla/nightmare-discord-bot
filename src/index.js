@@ -2,8 +2,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const bosses = require('../data/bosses.json');
 const {GUILD_ID, TOKEN} = require('../config');
-const { Emojis, Bosses, Drops } = require('../utils');
-const { nightmareKill, doubleDrop } = require('../boss/Nightmare');
+import { Emojis, Bosses, Drops } from '../utils';
+import { nightmareKill, doubleDrop } from '../boss/Nightmare';
 let emojis;
 
 client.on('ready', () => {
