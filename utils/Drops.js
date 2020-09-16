@@ -2,8 +2,8 @@
  * Display unique drops and depending on filter, kc of drops
  * @param {*}  
  */
-export const Drops = ([summary, drops]) => {
-    dropsString = `${summary}\n`;
+export const Drops = ({summary, drops}) => {
+    let dropsString = `${summary}\n`;
     if (drops === -1) {
         return ("Kill amount not specified.");
     } else if (drops === 0) {

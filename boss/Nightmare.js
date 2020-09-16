@@ -6,7 +6,7 @@ const bosses = require('../data/bosses.json');
  * @param {[string]} args 
  */
 // Simulates nightmare kill amount and party size
-export const nightmareKill = (args) => {
+export const nightmareKill = (args, emojis) => {
     // get nm object
     const nm = bosses.find(i => {
         return i.name = "The Nightmare";

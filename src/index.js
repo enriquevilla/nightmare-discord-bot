@@ -27,11 +27,9 @@ client.on('message', msg => {
                 msg.channel.send(`Enrique Villa\nhttps://www.github.com/enriquevilla`);
             }
             if (cmd === 'nm' || cmd === 'nightmare') {
-                args = args.splice(1);
-                msg.channel.send(Drops(nightmareKill(args)));
+                msg.channel.send(Drops(nightmareKill(args, emojis)));
             }
             if (cmd === 'nmdoubledrop' || cmd === 'nmdd') {
-                args = args.splice(1);
                 msg.channel.send(doubleDrop(args));
             }
         }
