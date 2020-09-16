@@ -1,8 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const bosses = require('../data/bosses.json');
 const {GUILD_ID, TOKEN} = require('../config');
-import { Emojis, Bosses, Drops } from '../utils';
+import { Emojis, Drops } from '../utils';
 import { nightmareKill, doubleDrop } from '../boss/Nightmare';
 let emojis;
 
@@ -27,23 +26,14 @@ client.on('message', msg => {
             if (cmd === 'author') {
                 msg.channel.send(`Enrique Villa\nhttps://www.github.com/enriquevilla`);
             }
-
-            // !help
-            // if (cmd === 'help') {
-            //     msg.channel.send(Bosses)
-            // }
-
-            // !k !kill
-            // if (cmd === 'k' || cmd === 'kill') {
-                if (cmd === 'nm' || cmd === 'nightmare') {
-                    args = args.splice(1);
-                    msg.channel.send(Drops(nightmareKill(args)));
-                }
-                if (cmd === 'nmdoubledrop' || cmd === 'nmdd') {
-                    args = args.splice(1);
-                    msg.channel.send(doubleDrop(args));
-                }
-            // }
+            if (cmd === 'nm' || cmd === 'nightmare') {
+                args = args.splice(1);
+                msg.channel.send(Drops(nightmareKill(args)));
+            }
+            if (cmd === 'nmdoubledrop' || cmd === 'nmdd') {
+                args = args.splice(1);
+                msg.channel.send(doubleDrop(args));
+            }
         }
     }
 });

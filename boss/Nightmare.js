@@ -1,4 +1,5 @@
 const { Roll, TertiaryRoll } = require('../utils');
+const bosses = require('../data/bosses.json');
 
 /**
  * Simulates a Nightmare kill amount with a set party size
