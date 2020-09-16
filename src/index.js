@@ -25,7 +25,7 @@ client.on('message', msg => {
         if (cmd) {
             // !author
             if (cmd === 'author') {
-                msg.channel.send(`Enrique Villa https://www.github.com/enriquevilla`);
+                msg.channel.send(`Enrique Villa\nhttps://www.github.com/enriquevilla`);
             }
 
             // !help
